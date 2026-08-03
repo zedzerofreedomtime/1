@@ -1,0 +1,16 @@
+{
+  "at": "2026-07-17T08:51:47.147Z",
+  "message": "หาปุ่มเลือกโมเดลไม่เจอ (ดู diagnostic ว่ามีปุ่มอะไรบ้าง)",
+  "url": "https://labs.google/fx/th/tools/flow/project/23f1b905-5a05-4147-811f-cd04e9b7b85c",
+  "ui": [
+    {
+      "tag": "textarea",
+      "shown": false
+    },
+    {
+      "tag": "p",
+      "role": "alert",
+      "shown": true
+    }
+  ]
+}

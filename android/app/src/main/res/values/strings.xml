@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Clip Bot</string>
+
+    <!-- Home -->
+    <string name="home_title">Clip Bot</string>
+    <string name="home_subtitle">เจนคลิปรีวิว + แคปชั่น AI</string>
+    <string name="btn_start">เริ่มทำงาน</string>
+    <string name="btn_stop">หยุด</string>
+    <string name="btn_pick_media">เลือกรูป / วิดีโอ</string>
+    <string name="btn_settings">ตั้งค่า</string>
+    <string name="btn_open_last">เปิดคลิปล่าสุด</string>
+    <string name="label_product_title">ชื่อสินค้า</string>
+    <string name="label_product_link">ลิงก์สินค้า (ไม่บังคับ)</string>
+    <string name="hint_product_title">เช่น เสื้อยืดโอเวอร์ไซส์สีขาว</string>
+    <string name="hint_product_link">https://…</string>
+    <string name="status_idle">พร้อมทำงาน</string>
+    <string name="status_running">กำลังทำงาน…</string>
+    <string name="status_paused">พักชั่วคราว</string>
+    <string name="status_finished">เสร็จแล้ว</string>
+    <string name="status_failed">ล้มเหลว</string>
+    <string name="media_count">เลือกสื่อแล้ว %1$d รายการ</string>
+    <string name="media_none">ยังไม่ได้เลือกสื่อ</string>
+    <string name="need_media">กรุณาเลือกรูปหรือวิดีโออย่างน้อย 1 รายการ</string>
+    <string name="need_ai_key">ยังไม่ได้ใส่ API key ของ AI — ไปที่ตั้งค่าก่อน</string>
+
+    <!-- Settings -->
+    <string name="settings_title">ตั้งค่า</string>
+    <string name="set_section_clip">การเจนคลิป</string>
+    <string name="set_clip_count">จำนวนคลิป / รอบ</string>
+    <string name="set_clip_len">ความยาวคลิป (วินาที)</string>
+    <string name="set_with_music">ใส่เพลง</string>
+    <string name="set_ai_tag">แฮชแท็ก AI</string>
+    <string name="set_overlay">ใส่ overlay</string>
+    <string name="set_fancy_fx">ลูกเล่นวิดีโอ (intro/outro, แฟลช, โลโก้)</string>
+    <string name="set_platform">แพลตฟอร์ม</string>
+    <string name="set_section_ai">AI แคปชั่น</string>
+    <string name="set_ai_provider">ผู้ให้บริการ AI</string>
+    <string name="set_openai_key">OpenAI API key</string>
+    <string name="set_gemini_key">Gemini API key</string>
+    <string name="set_claude_key">Claude (Anthropic) API key</string>
+    <string name="set_caption_prompt">พรอมป์แคปชั่น</string>
+    <string name="set_section_post">การโพสต์</string>
+    <string name="set_auto_post">โพสต์อัตโนมัติ (ต้องเปิด Accessibility)</string>
+    <string name="set_dry_run">ทดสอบ (ไม่กดโพสต์จริง)</string>
+    <string name="set_floating">ปุ่มลอยควบคุม</string>
+    <string name="btn_save">บันทึก</string>
+    <string name="saved">บันทึกแล้ว</string>
+
+    <!-- Notifications / services -->
+    <string name="chan_bot_name">บอทเจนคลิป</string>
+    <string name="chan_bot_desc">แจ้งความคืบหน้าตอนกำลังทำคลิป</string>
+    <string name="notif_bot_title">Clip Bot — กำลังทำคลิป</string>
+    <string name="notif_action_stop">หยุด</string>
+    <string name="notif_action_toggle_float">ปุ่มลอย</string>
+
+    <!-- Accessibility (Phase 2) -->
+    <string name="accessibility_desc">เปิดเพื่อให้ Clip Bot กดโพสต์คลิปให้อัตโนมัติ และแสดงปุ่มลอยควบคุม</string>
+
+    <!-- Battery / permission dialogs -->
+    <string name="perm_battery_title">ให้บอททำงานเบื้องหลัง</string>
+    <string name="perm_battery_msg">อนุญาตให้แอปทำงานต่อเนื่องโดยไม่ถูกระบบปิด เพื่อให้ทำคลิปได้ครบ</string>
+    <string name="perm_allow">อนุญาต</string>
+</resources>

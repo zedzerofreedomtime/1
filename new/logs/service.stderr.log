@@ -1,0 +1,101 @@
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\reference-style.js' imported from X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\extension-api.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at nextStep (node:internal/modules/customization_hooks:189:26)
+    at resolveBaseSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:9102)
+    at resolveDirectorySync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:10315)
+    at resolveTsPathsSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:11547)
+    at resolve (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:13365) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/backend/src/extension/reference-style.js'
+}
+
+Node.js v24.18.0
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\reference-style.js' imported from X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\extension-api.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at nextStep (node:internal/modules/customization_hooks:189:26)
+    at resolveBaseSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:9102)
+    at resolveDirectorySync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:10315)
+    at resolveTsPathsSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:11547)
+    at resolve (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:13365) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/backend/src/extension/reference-style.js'
+}
+
+Node.js v24.18.0
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\reference-style.js' imported from X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\extension-api.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at nextStep (node:internal/modules/customization_hooks:189:26)
+    at resolveBaseSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:9102)
+    at resolveDirectorySync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:10315)
+    at resolveTsPathsSync (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:11547)
+    at resolve (file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/node_modules/tsx/dist/register-zZ7SWseA.mjs:2:13365) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///X:/%E0%B8%97%E0%B8%B5%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C/app/clipbot/new/backend/src/extension/reference-style.js'
+}
+
+Node.js v24.18.0
+X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\server\index.ts:24
+const ORPHAN_JOB_STALE_MINUTES = Math.max(20, config.staleJobMinutes);
+                                              ^
+
+ReferenceError: config is not defined
+    at <anonymous> (X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\server\index.ts:24:47)
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.18.0
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:8110
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at node:net:2275:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2045:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 8110
+}
+
+Node.js v24.18.0
+X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\backend\src\extension\job-finalize.ts:6
+import { updateJob } from '../db/job-repository.js';
+         ^
+SyntaxError: The requested module '../db/job-repository.js' does not provide an export named 'updateJob'
+    at #asyncInstantiate (node:internal/modules/esm/module_job:327:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:431:5)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.18.0

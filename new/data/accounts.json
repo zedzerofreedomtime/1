@@ -1,0 +1,14 @@
+[
+  {
+    "port": 9222,
+    "profileDir": "X:\\ทีมมีเดีย\\เฟรนด์\\app\\clipbot\\new\\data\\chrome-profile-9222",
+    "status": "active",
+    "proxy": null,
+    "jobsCompleted": 0,
+    "flagCount": 0,
+    "lastFlaggedAt": null,
+    "cooldownUntil": null,
+    "dailyJobCount": 0,
+    "lastDailyReset": "2026-08-03"
+  }
+]

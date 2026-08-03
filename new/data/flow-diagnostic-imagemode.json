@@ -1,0 +1,142 @@
+{
+  "at": "2026-07-17T07:54:44.610Z",
+  "message": "รอหน้าจอ Flow นานเกินกำหนด: ปุ่ม Start frame (เริ่ม)",
+  "url": "https://labs.google/fx/th/tools/flow/project/146576df-f160-481c-91b4-130fcc3fc698",
+  "ui": [
+    {
+      "tag": "button",
+      "text": "arrow_backย้อนกลับ",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "aria": "ข้อความที่แก้ไขได้",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "more_vertตัวเลือกเพิ่มเติม",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "searchค้นหา",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "filter_listจัดเรียงและกรอง",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "addเพิ่มสื่อ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "helpความช่วยเหลือเกี่ยวกับผลิตภัณฑ์",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "settings_2ดูการตั้งค่า",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "more_vertเพิ่มเติม",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "dashboardสื่อทั้งหมด",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "accessibility_newตัวละคร",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "movieดูฉาก",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "apps_spark_2เครื่องมือ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "deleteดูถังขยะ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "left_panel_closeยุบ",
+      "shown": true
+    },
+    {
+      "tag": "div",
+      "role": "textbox",
+      "text": "คุณต้องการสร้างอะไร",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "dialog",
+      "text": "add_2สร้าง",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "text": "Agent",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "text": "🍌 Nano Banana 2 Litecrop_9_161x",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "arrow_forwardสร้าง",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "file",
+      "shown": false
+    },
+    {
+      "tag": "textarea",
+      "shown": false
+    }
+  ]
+}

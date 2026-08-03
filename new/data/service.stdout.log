@@ -1,0 +1,171 @@
+2026-07-24 08:49:48 [32MINFO[39M [32m✅ เชื่อมต่อ PostgreSQL สำเร็จ[39m
+2026-07-24 08:49:49 [33MWARN[39M [33m⚠️ พบตาราง Python เก่า scrapejob — เก็บไว้แบบ read-only; Node ใช้ scrape_job เท่านั้น[39m
+2026-07-24 08:49:49 [32MINFO[39M [32m✅ ClipForge schema v2 พร้อมใช้งาน (dataset, item, flow_job, scrape_job, scrape_ingest_batch)[39m
+2026-07-24 08:49:49 [32MINFO[39M [32m[service | startup] ClipBot Flow พร้อมที่ http://127.0.0.1:8110[39m {"version":"unknown"}
+2026-07-24 08:50:01 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: reload[39m
+2026-07-24 08:50:17 [32MINFO[39M [32m[extension | bot.status | trace=mrya9du1-laqnzj] รีโมตสั่งโหลดโค้ดใหม่...[39m {"running":false,"creditLocked":true}
+2026-07-24 08:53:40 [32MINFO[39M [32m[extension | bot.status | trace=mryadqog-e69y2d] บอทพร้อมใช้งาน — เปิด Extension เพื่อเริ่ม[39m {"running":false,"creditLocked":true}
+2026-07-24 08:54:22 [32MINFO[39M [32m[extension | bot.status | trace=mryaenhb-dab7ky] บอทพร้อมใช้งาน — เปิด Extension เพื่อเริ่ม[39m {"running":false,"creditLocked":true}
+2026-07-24 08:55:44 [32MINFO[39M [32m[extension | bot.status | trace=mryagejt-724cw7] บอทพร้อมใช้งาน — เปิด Extension เพื่อเริ่ม[39m {"running":false,"creditLocked":true}
+2026-07-24 09:05:44 [31MERROR[39M [31m[extension | api.request | trace=mryat9g8-ab3b1b] POST /api/extension/status ล้มเหลว[39m {"durationMs":7,"error":{"name":"TypeError","message":"Failed to fetch","stack":"TypeError: Failed to fetch\n    at api (chrome-extension://ijkeinnmlaakfeommkdokpenebepdpke/background.js:87:28)\n    at async setStatus (chrome-extension://ijkeinnmlaakfeommkdokpenebepdpke/background.js:342:19)\n    at async chrome-extension://ijkeinnmlaakfeommkdokpenebepdpke/background.js:1234:3"}}
+2026-07-24 09:16:14 [32MINFO[39M [32m[extension | bot.status | trace=mryb6rc8-yge57s] บอทพร้อมใช้งาน — เปิด Extension เพื่อเริ่ม[39m {"running":false,"creditLocked":true}
+2026-07-24 09:18:14 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: unlock[39m
+2026-07-24 09:18:29 [32MINFO[39M [32m[extension | bot.status | trace=mryb9nhk-x7x1nw] รีโมตปลดล็อกเครดิตแล้ว — พร้อมเริ่ม[39m {"running":false,"creditLocked":false}
+2026-07-24 09:18:44 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: start[39m
+2026-07-24 09:18:44 [32MINFO[39M [32m[service | job.auto | trace=mryb9z3g-358r6i] สุ่มสินค้าเข้าคิวอัตโนมัติ — เริ่ม[39m {}
+2026-07-24 09:18:44 [32MINFO[39M [32m[service | job.auto | trace=mryb9z3g-358r6i] สุ่มสินค้าเข้าคิวอัตโนมัติ — สำเร็จ[39m {"durationMs":26}
+2026-07-24 09:18:44 [32MINFO[39M [32m[extension | bot.status | trace=mryb9z4m-84oing] Gemini กำลังเลือกภาพและวางแผน 2 คลิป[39m {"running":true,"creditLocked":false}
+2026-07-24 09:18:44 [32MINFO[39M [32m[service | job.prepare | trace=mryb9z5u-ilts3v] จองงานและให้ Gemini เตรียมรูป/พรอมต์ — เริ่ม[39m {}
+2026-07-24 09:18:44 [32MINFO[39M [32m[service | media.download | job=68] ดาวน์โหลดรูปผู้สมัครจากรีวิว — เริ่ม[39m {}
+2026-07-24 09:18:45 [32MINFO[39M [32m[service | media.download | job=68] ดาวน์โหลดรูปผู้สมัครจากรีวิว — สำเร็จ[39m {"durationMs":1486}
+2026-07-24 09:18:45 [32MINFO[39M [32m[gemini | vision.plan | job=68] วิเคราะห์และเลือกรูปจาก 8 รูป — เริ่ม[39m {}
+2026-07-24 09:18:45 [32MINFO[39M [32m🤖 Gemini Vision กำลังวิเคราะห์ 8 รูป...[39m
+2026-07-24 09:18:53 [32MINFO[39M [32m✅ Gemini Vision สร้างสำเร็จ: เลือกรูป [2], 2 motion prompts, 2 subtitle segments[39m
+2026-07-24 09:18:53 [32MINFO[39M [32m[gemini | vision.plan | job=68] วิเคราะห์และเลือกรูปจาก 8 รูป — สำเร็จ[39m {"durationMs":7085}
+2026-07-24 09:18:53 [32MINFO[39M [32m[service | job.prepare | trace=mryb9z5u-ilts3v] จองงานและให้ Gemini เตรียมรูป/พรอมต์ — สำเร็จ[39m {"durationMs":8641}
+2026-07-24 09:18:53 [32MINFO[39M [32m[extension | bot.status | trace=mryba5uc-vr0wbk | job=68 | clip=1] กำลังเปิด Flow สำหรับงาน #68[39m {"running":true,"creditLocked":false}
+2026-07-24 09:18:53 [32MINFO[39M [32m[extension | bot.status | trace=mryba5v9-0tlb7n | job=68 | clip=1] Job #68: preparing the hand-held product image[39m {"running":true,"creditLocked":false}
+2026-07-24 09:18:53 [32MINFO[39M [32m[extension | bot.status | trace=mryba5wg-ue4f2a | job=68 | clip=1] กำลังเปิดโปรเจกต์ใหม่ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-24 09:18:53 [32MINFO[39M [32m[extension | bot.status | trace=mryba5xl-4v432b | job=68 | clip=1] กดสร้างโปรเจกต์ใหม่แล้ว — รอหน้า editor[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:25 [32MINFO[39M [32m[extension | bot.status | trace=mrybauoe-hqssce | job=68 | clip=1] Preparing Flow image mode (9:16, one image)[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:30 [32MINFO[39M [32m[extension | bot.status | trace=mrybaymy-k0xzex | job=68 | clip=1] เปิดคลังสื่อเพื่ออัปโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:32 [32MINFO[39M [32m[extension | bot.status | trace=mrybb06r-dm962d | job=68 | clip=1] กำลังโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:32 [32MINFO[39M [32m[extension | media.fetch | trace=mrybb08v-0ynln6 | job=68 | clip=1] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":173284}
+2026-07-24 09:19:32 [32MINFO[39M [32m[extension | bot.status | trace=mrybb09k-6dsfdz | job=68 | clip=1] อัปโหลด clipbot_job_68_product_reference.jpg แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:35 [32MINFO[39M [32m[extension | bot.status | trace=mrybb2cv-kqfgxi | job=68 | clip=1] Flow กำลังประมวลผลเฟรมต้น (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:52 [32MINFO[39M [32m[extension | bot.status | trace=mrybbg17-m3tew3 | job=68 | clip=1] เลือกรูปเป็น Start frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:19:52 [32MINFO[39M [32m[extension | bot.status | trace=mrybbg22-reje6e | job=68 | clip=1] กำลังใส่ Motion Prompt ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-24 09:21:38 [32MINFO[39M [32m[extension | bot.status | trace=mrybdplq-w62za1 | job=68 | clip=1] Motion Prompt typed character-by-character; Generate is enabled[39m {"running":true,"creditLocked":false}
+2026-07-24 09:21:39 [32MINFO[39M [32m[extension | bot.status | trace=mrybdqk3-srk7gk | job=68 | clip=1] งาน #68: เปิดตัวเฝ้าผลรูปมือจับแล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:21:40 [32MINFO[39M [32m[extension | bot.status | trace=mrybdqpp-257t8s | job=68 | clip=1] Job #68: start image generation submitted — duplicate clicks are blocked[39m {"running":true,"creditLocked":false}
+2026-07-24 09:21:43 [32MINFO[39M [32m[extension | bot.status | trace=mrybdtoh-z760bg | job=68 | clip=1] งาน #68: Flow แสดงสถานะล้มเหลวชั่วคราว — รอภาพใหม่อีกไม่เกิน 2 นาที[39m {"running":true,"creditLocked":false}
+2026-07-24 09:21:43 [33MWARN[39M [33m[extension | flow.image-failure-grace | trace=mrybdtpa-xfjh4u | job=68 | clip=1] พบการ์ดล้มเหลวระหว่างที่ภาพใหม่อาจยังประมวลผลอยู่[39m {"graceUntil":1784859819889}
+2026-07-24 09:22:16 [32MINFO[39M [32m[extension | bot.status | trace=mrybeihh-5zd3gd | job=68 | clip=1] เจอรูปภาพที่สร้างใหม่ใน 36s — กำลังบันทึก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:22:16 [32MINFO[39M [32m[extension | bot.status | trace=mrybeiid-04sb6k | job=68 | clip=1] Job #68: saving generated hand-held product image[39m {"running":true,"creditLocked":false}
+2026-07-24 09:22:16 [32MINFO[39M [32m[extension | image.download | trace=mrybeije-m0jzfg | job=68 | clip=1] Downloading generated product image from Flow[39m {}
+2026-07-24 09:22:16 [32MINFO[39M [32m[service | image.import | trace=mrybej5g-cijcd0 | job=68] นำเข้ารูปมือจับสินค้าจาก Flow — เริ่ม[39m {}
+2026-07-24 09:22:18 [32MINFO[39M [32m[gemini | image.fidelity | job=68] เปรียบเทียบสินค้าต้นฉบับกับภาพที่ Flow สร้าง — เริ่ม[39m {}
+2026-07-24 09:22:21 [32MINFO[39M [32m[gemini | image.fidelity | job=68] เปรียบเทียบสินค้าต้นฉบับกับภาพที่ Flow สร้าง — สำเร็จ[39m {"durationMs":2961}
+2026-07-24 09:22:21 [32MINFO[39M [32m🖼️ บันทึกรูปตั้งต้นจาก Flow สำหรับงาน #68: X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\data\output\job_68\job_68_generated_start.jpg[39m
+2026-07-24 09:22:21 [32MINFO[39M [32m[service | image.import | trace=mrybej5g-cijcd0 | job=68] นำเข้ารูปมือจับสินค้าจาก Flow — สำเร็จ[39m {"durationMs":4294}
+2026-07-24 09:22:21 [32MINFO[39M [32m[extension | image.download | trace=mrybemh2-skbz0z | job=68 | clip=1] Generated product image imported[39m {"durationMs":5100,"bytes":549825}
+2026-07-24 09:22:21 [32MINFO[39M [32m[extension | bot.status | trace=mrybemhp-mfdfp0 | job=68 | clip=1] Generated start image saved (537 KB) — cooldown before end frame[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybg8ht-gltg4h | job=68 | clip=1] Job #68: preparing the matching end frame[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybg8ip-onx2if | job=68 | clip=1] Preparing Flow image mode (9:16, one image)[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:41 [32MINFO[39M [32m[extension | bot.status | trace=mrybgc9q-jgx6wt | job=68 | clip=1] เปิดคลังสื่อเพื่ออัปโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:43 [32MINFO[39M [32m[extension | bot.status | trace=mrybgdzb-wvil8b | job=68 | clip=1] กำลังโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:43 [32MINFO[39M [32m[extension | media.fetch | trace=mrybge16-fi7ls5 | job=68 | clip=1] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":107512}
+2026-07-24 09:23:43 [32MINFO[39M [32m[extension | bot.status | trace=mrybge1u-s9d174 | job=68 | clip=1] อัปโหลด clipbot_job_68_generated_start_reference.jpg แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:43 [32MINFO[39M [32m[extension | bot.status | trace=mrybge39-6jtrut | job=68 | clip=1] รูป auto-select แล้ว — เพิ่มเข้าพรอมต์โดยตรง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:23:43 [32MINFO[39M [32m[extension | bot.status | trace=mrybge5l-55ylre | job=68 | clip=1] Flow กำลังประมวลผลเฟรมต้น (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-24 09:24:01 [32MINFO[39M [32m[extension | bot.status | trace=mrybgs18-88jhqg | job=68 | clip=1] เลือกรูปเป็น Start frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:24:01 [32MINFO[39M [32m[extension | bot.status | trace=mrybgs24-tzgwnw | job=68 | clip=1] กำลังใส่ Motion Prompt ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:12 [32MINFO[39M [32m[extension | bot.status | trace=mrybiar0-hrdscg | job=68 | clip=1] Motion Prompt typed character-by-character; Generate is enabled[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:13 [32MINFO[39M [32m[extension | bot.status | trace=mrybibpb-y1f6bq | job=68 | clip=1] งาน #68: เปิดตัวเฝ้าผลรูปมือจับแล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:14 [32MINFO[39M [32m[extension | bot.status | trace=mrybibuz-6aigo1 | job=68 | clip=1] Job #68: end image generation submitted — duplicate clicks are blocked[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:17 [32MINFO[39M [32m[extension | bot.status | trace=mrybiett-34ic6z | job=68 | clip=1] งาน #68: Flow แสดงสถานะล้มเหลวชั่วคราว — รอภาพใหม่อีกไม่เกิน 2 นาที[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:18 [33MWARN[39M [33m[extension | flow.image-failure-grace | trace=mrybieul-dwe2ep | job=68 | clip=1] พบการ์ดล้มเหลวระหว่างที่ภาพใหม่อาจยังประมวลผลอยู่[39m {"graceUntil":1784860033917}
+2026-07-24 09:25:50 [32MINFO[39M [32m[extension | bot.status | trace=mrybj3me-vr6mgs | job=68 | clip=1] เจอรูปภาพที่สร้างใหม่ใน 36s — กำลังบันทึก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:50 [32MINFO[39M [32m[extension | bot.status | trace=mrybj3n8-g3io7r | job=68 | clip=1] Job #68: saving generated end frame[39m {"running":true,"creditLocked":false}
+2026-07-24 09:25:50 [32MINFO[39M [32m[extension | image.download | trace=mrybj3ob-ouuef2 | job=68 | clip=1] Downloading generated product image from Flow[39m {}
+2026-07-24 09:25:51 [32MINFO[39M [32m[service | image.import | trace=mrybj4bt-rk33f7 | job=68] นำเข้ารูปมือจับสินค้าจาก Flow — เริ่ม[39m {}
+2026-07-24 09:25:51 [32MINFO[39M [32m[gemini | image.end-fidelity | job=68] เปรียบเทียบสินค้าต้นฉบับกับภาพปลายที่ Flow สร้าง — เริ่ม[39m {}
+2026-07-24 09:25:54 [32MINFO[39M [32m[gemini | image.end-fidelity | job=68] เปรียบเทียบสินค้าต้นฉบับกับภาพปลายที่ Flow สร้าง — สำเร็จ[39m {"durationMs":2610}
+2026-07-24 09:25:54 [32MINFO[39M [32m🖼️ บันทึก End frame จาก Flow สำหรับงาน #68: X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\data\output\job_68\job_68_generated_end.jpg[39m
+2026-07-24 09:25:54 [32MINFO[39M [32m[service | image.import | trace=mrybj4bt-rk33f7 | job=68] นำเข้ารูปมือจับสินค้าจาก Flow — สำเร็จ[39m {"durationMs":3038}
+2026-07-24 09:25:54 [32MINFO[39M [32m[extension | image.download | trace=mrybj6ol-7q7wv7 | job=68 | clip=1] Generated product image imported[39m {"durationMs":3899,"bytes":502100}
+2026-07-24 09:25:54 [32MINFO[39M [32m[extension | bot.status | trace=mrybj6pf-jc84f8 | job=68 | clip=1] Generated end image saved (490 KB) — cooldown before clip 1/2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:41 [32MINFO[39M [32m[extension | bot.status | trace=mrybms1b-smubud | job=68 | clip=1] งาน #68: เตรียมคลิป 1 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:41 [32MINFO[39M [32m[extension | bot.status | trace=mrybms27-bnpcx2 | job=68 | clip=1] กำลังตั้งค่าวิดีโอ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:46 [32MINFO[39M [32m[extension | bot.status | trace=mrybmvos-5so8k5 | job=68 | clip=1] ตั้งค่าวิดีโอสำเร็จ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:46 [32MINFO[39M [32m[extension | bot.status | trace=mrybmvpj-puixmy | job=68 | clip=1] เปิดคลังสื่อเพื่ออัปโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:48 [32MINFO[39M [32m[extension | bot.status | trace=mrybmx4q-1u3xt1 | job=68 | clip=1] กำลังโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:48 [32MINFO[39M [32m[extension | media.fetch | trace=mrybmx7u-8dtvsd | job=68 | clip=1] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":101215}
+2026-07-24 09:28:48 [32MINFO[39M [32m[extension | bot.status | trace=mrybmx90-asj7lp | job=68 | clip=1] อัปโหลด clipbot_job_68_frame_1.jpg แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:48 [32MINFO[39M [32m[extension | bot.status | trace=mrybmx9x-ls53kw | job=68 | clip=1] รูป auto-select แล้ว — เพิ่มเข้าพรอมต์โดยตรง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:28:48 [32MINFO[39M [32m[extension | bot.status | trace=mrybmxbw-z5yk4e | job=68 | clip=1] Flow กำลังประมวลผลเฟรมต้น (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybnaxc-gv2wb2 | job=68 | clip=1] เลือกรูปเป็น Start frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybnaya-zbde0q | job=68 | clip=1] เปิดคลังสื่อเพื่อใส่ End frame (มุมที่อยากเผย)[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:07 [32MINFO[39M [32m[extension | bot.status | trace=mrybncb1-8gezh1 | job=68 | clip=1] กำลังโหลดรูป End frame[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:08 [32MINFO[39M [32m[extension | media.fetch | trace=mrybnccq-nlt2hp | job=68 | clip=1] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":101215}
+2026-07-24 09:29:08 [32MINFO[39M [32m[extension | bot.status | trace=mrybncdc-utz2rk | job=68 | clip=1] อัปโหลด clipbot_job_68_end_1.jpg (End frame) แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:08 [32MINFO[39M [32m[extension | bot.status | trace=mrybnceq-0sbu9t | job=68 | clip=1] รูป End frame auto-select แล้ว — เพิ่มเข้าพรอมต์โดยตรง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:08 [32MINFO[39M [32m[extension | bot.status | trace=mrybncgx-hs0cgb | job=68 | clip=1] Flow กำลังประมวลผล End frame (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:26 [32MINFO[39M [32m[extension | bot.status | trace=mrybnq7j-dt9pul | job=68 | clip=1] เลือกรูปเป็น End frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:29:26 [32MINFO[39M [32m[extension | bot.status | trace=mrybnq8a-w0kgur | job=68 | clip=1] กำลังใส่ Motion Prompt ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybol7f-yb6bdw | job=68 | clip=1] Motion Prompt typed character-by-character; Generate is enabled[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybol87-b5tjqr | job=68 | clip=1] งาน #68: พร้อมกดสร้างคลิป 1[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybol9c-ejis9r | job=68 | clip=1] งาน #68: เปิดตัวเฝ้าผลคลิป 1 แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:06 [32MINFO[39M [32m[extension | bot.status | trace=mrybolfn-g8cxhm | job=68 | clip=1] งาน #68: ส่งสร้างคลิป 1 แล้ว — จะไม่กดซ้ำ[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:10 [32MINFO[39M [32m[extension | bot.status | trace=mryboodu-5czpbh | job=68 | clip=1] งาน #68: Flow แสดงสถานะล้มเหลวชั่วคราว — รอคลิปใหม่อีกไม่เกิน 2 นาที[39m {"running":true,"creditLocked":false}
+2026-07-24 09:30:10 [33MWARN[39M [33m[extension | flow.image-failure-grace | trace=mrybooei-tgmfwo | job=68 | clip=1] พบการ์ดล้มเหลวระหว่างที่ภาพใหม่อาจยังประมวลผลอยู่[39m {"graceUntil":1784860326238}
+2026-07-24 09:31:02 [32MINFO[39M [32m[extension | bot.status | trace=mrybpso5-yk7780 | job=68 | clip=1] เจอวิดีโอใหม่ใน 56s — กำลังบันทึก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:31:02 [32MINFO[39M [32m[extension | bot.status | trace=mrybpsoy-ccl9nk | job=68 | clip=1] กำลังบันทึกคลิป 1 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:31:02 [32MINFO[39M [32m[extension | clip.download | trace=mrybpsq1-z0c9r9 | job=68 | clip=1] เริ่มดาวน์โหลดคลิปจาก Flow[39m {}
+2026-07-24 09:31:04 [32MINFO[39M [32m[service | clip.import | trace=mrybpudq-cg7uas | job=68 | clip=1] นำเข้าไฟล์จาก Chrome Downloads — เริ่ม[39m {}
+2026-07-24 09:31:05 [32MINFO[39M [32m📥 นำคลิปจาก Chrome Downloads เข้า job #68 clip 1 แล้ว (2052 KB)[39m
+2026-07-24 09:31:05 [32MINFO[39M [32m[service | clip.import | trace=mrybpudq-cg7uas | job=68 | clip=1] นำเข้าไฟล์จาก Chrome Downloads — สำเร็จ[39m {"durationMs":672}
+2026-07-24 09:31:05 [32MINFO[39M [32m[extension | clip.download | trace=mrybpuwv-8lgimi | job=68 | clip=1] ดาวน์โหลดและนำเข้าคลิปสำเร็จ[39m {"durationMs":2838,"bytes":2101718}
+2026-07-24 09:31:05 [32MINFO[39M [32m[extension | bot.status | trace=mrybpuxk-7o8e1j | job=68 | clip=1] บันทึกคลิป 1 แล้ว (2052 KB)[39m {"running":true,"creditLocked":false}
+2026-07-24 09:31:05 [32MINFO[39M [32m[extension | bot.status | trace=mrybpuya-0st8nt | job=68 | clip=2] คลิป 1 เสร็จ — พักสุ่ม 2 นาที ก่อนเตรียมคลิป 2 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:09 [32MINFO[39M [32m[extension | bot.status | trace=mrybsicm-q7dm9i | job=68 | clip=2] งาน #68: เตรียมคลิป 2 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:09 [32MINFO[39M [32m[extension | bot.status | trace=mrybsidf-jnw6ex | job=68 | clip=2] กำลังเปิดโปรเจกต์ใหม่สำหรับคลิปต่อเนื่องหลังใช้ End frame[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:09 [32MINFO[39M [32m[extension | bot.status | trace=mrybsif2-66gk8h | job=68 | clip=2] กำลังกลับหน้ารวมโปรเจกต์เพื่อสร้างโปรเจกต์ใหม่[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:14 [32MINFO[39M [32m[extension | bot.status | trace=mrybsmci-7baxjn | job=68 | clip=2] งาน #68: เตรียมคลิป 2 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:14 [32MINFO[39M [32m[extension | bot.status | trace=mrybsmdz-dpgl5e | job=68 | clip=2] กำลังกู้ checkpoint คลิป 2 ในโปรเจกต์ใหม่[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:14 [32MINFO[39M [32m[extension | bot.status | trace=mrybsmf5-svhzck | job=68 | clip=2] กดสร้างโปรเจกต์ใหม่แล้ว — รอหน้า editor[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:46 [32MINFO[39M [32m[extension | bot.status | trace=mrybtb9m-43v8h1 | job=68 | clip=2] กำลังตั้งค่าวิดีโอ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:49 [32MINFO[39M [32m[extension | bot.status | trace=mrybtd5n-fpy0p1 | job=68 | clip=2] ตั้งค่าวิดีโอสำเร็จ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:49 [32MINFO[39M [32m[extension | bot.status | trace=mrybtd6h-73v6yh | job=68 | clip=2] เปิดคลังสื่อเพื่ออัปโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:51 [32MINFO[39M [32m[extension | bot.status | trace=mrybtevj-rdd8lu | job=68 | clip=2] กำลังโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:51 [32MINFO[39M [32m[extension | media.fetch | trace=mrybtex7-im7jq1 | job=68 | clip=2] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":79215}
+2026-07-24 09:33:51 [32MINFO[39M [32m[extension | bot.status | trace=mrybtext-sg5x9g | job=68 | clip=2] อัปโหลด clipbot_job_68_frame_2.jpg แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-24 09:33:54 [32MINFO[39M [32m[extension | bot.status | trace=mrybth7c-yxkuhq | job=68 | clip=2] Flow กำลังประมวลผลเฟรมต้น (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:12 [32MINFO[39M [32m[extension | bot.status | trace=mrybtuxh-lzrbq8 | job=68 | clip=2] เลือกรูปเป็น Start frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:12 [32MINFO[39M [32m[extension | bot.status | trace=mrybtuy9-vuefll | job=68 | clip=2] กำลังใส่ Motion Prompt ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybudwv-syi4vd | job=68 | clip=2] Motion Prompt typed character-by-character; Generate is enabled[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybudxn-bm7vts | job=68 | clip=2] งาน #68: พร้อมกดสร้างคลิป 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybudys-1rk87m | job=68 | clip=2] งาน #68: เปิดตัวเฝ้าผลคลิป 2 แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:36 [32MINFO[39M [32m[extension | bot.status | trace=mrybue4y-7lahi2 | job=68 | clip=2] งาน #68: ส่งสร้างคลิป 2 แล้ว — จะไม่กดซ้ำ[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:40 [32MINFO[39M [32m[extension | bot.status | trace=mrybuh3j-xn2nm6 | job=68 | clip=2] งาน #68: Flow แสดงสถานะล้มเหลวชั่วคราว — รอคลิปใหม่อีกไม่เกิน 2 นาที[39m {"running":true,"creditLocked":false}
+2026-07-24 09:34:40 [33MWARN[39M [33m[extension | flow.image-failure-grace | trace=mrybuh49-2obpf5 | job=68 | clip=2] พบการ์ดล้มเหลวระหว่างที่ภาพใหม่อาจยังประมวลผลอยู่[39m {"graceUntil":1784860596722}
+2026-07-24 09:35:24 [32MINFO[39M [32m[extension | bot.status | trace=mrybvf6j-slwbo8 | job=68 | clip=2] เจอวิดีโอใหม่ใน 48s — กำลังบันทึก[39m {"running":true,"creditLocked":false}
+2026-07-24 09:35:24 [32MINFO[39M [32m[extension | bot.status | trace=mrybvf7e-52guve | job=68 | clip=2] กำลังบันทึกคลิป 2 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-24 09:35:25 [32MINFO[39M [32m[extension | clip.download | trace=mrybvf8l-1r13k1 | job=68 | clip=2] เริ่มดาวน์โหลดคลิปจาก Flow[39m {}
+2026-07-24 09:35:27 [32MINFO[39M [32m[service | clip.import | trace=mrybvgxd-7rd3d5 | job=68 | clip=2] นำเข้าไฟล์จาก Chrome Downloads — เริ่ม[39m {}
+2026-07-24 09:35:27 [32MINFO[39M [32m📥 นำคลิปจาก Chrome Downloads เข้า job #68 clip 2 แล้ว (1840 KB)[39m
+2026-07-24 09:35:27 [32MINFO[39M [32m[service | clip.import | trace=mrybvgxd-7rd3d5 | job=68 | clip=2] นำเข้าไฟล์จาก Chrome Downloads — สำเร็จ[39m {"durationMs":311}
+2026-07-24 09:35:27 [32MINFO[39M [32m[extension | clip.download | trace=mrybvh6j-rdps54 | job=68 | clip=2] ดาวน์โหลดและนำเข้าคลิปสำเร็จ[39m {"durationMs":2517,"bytes":1884018}
+2026-07-24 09:35:27 [32MINFO[39M [32m[extension | bot.status | trace=mrybvh77-bqabyy | job=68 | clip=2] บันทึกคลิป 2 แล้ว (1840 KB)[39m {"running":true,"creditLocked":false}
+2026-07-24 09:35:27 [32MINFO[39M [32m[extension | bot.status | trace=mrybvh83-9l83ew | job=68 | clip=2] กำลังประกอบวิดีโองาน #68[39m {"running":true,"creditLocked":false}
+2026-07-24 09:35:27 [32MINFO[39M [32m[service | job.finalize | trace=mrybvh98-ueyupz | job=68] พากย์เสียงและประกอบวิดีโอสุดท้าย — เริ่ม[39m {}
+2026-07-24 09:35:27 [32MINFO[39M [32m[gemini | video.narration | job=68] ดูคลิปจริงแล้วเขียนบทพากย์ตามภาพ — เริ่ม[39m {}
+2026-07-24 09:35:27 [32MINFO[39M [32m🎬 Gemini กำลังดูคลิปจริง 2 คลิปเพื่อเขียนบทพากย์...[39m
+2026-07-24 09:35:32 [33MWARN[39M [33m⚠️ บทจากวิดีโอไม่ผ่าน validator รอบ 1: บทคลิป 2 บรรยายกล้อง/มือแทนการขายสินค้า[39m
+2026-07-24 09:35:32 [32MINFO[39M [32m🎬 Gemini กำลังดูคลิปจริง 2 คลิปเพื่อเขียนบทพากย์...[39m
+2026-07-24 09:35:37 [33MWARN[39M [33m⚠️ บทจากวิดีโอไม่ผ่าน validator รอบ 2: บทจากวิดีโอคลิป 1 สั้นเกินไป — ต้องมีอย่างน้อย 68 ตัวอักษรที่ออกเสียง[39m
+2026-07-24 09:35:37 [32MINFO[39M [32m🎬 Gemini กำลังดูคลิปจริง 2 คลิปเพื่อเขียนบทพากย์...[39m
+2026-07-24 09:35:45 [32MINFO[39M [32m✅ Gemini เขียนบทใหม่จากคลิปจริงและผ่าน compliance gate[39m
+2026-07-24 09:35:45 [32MINFO[39M [32m[gemini | video.narration | job=68] ดูคลิปจริงแล้วเขียนบทพากย์ตามภาพ — สำเร็จ[39m {"durationMs":17762}
+2026-07-24 09:35:45 [32MINFO[39M [32m[service | tts.generate | job=68] สร้างเสียงพากย์ — เริ่ม[39m {}
+2026-07-24 09:35:45 [32MINFO[39M [32m🗣️ Gemini TTS: Aoede (gemini-3.1-flash-tts-preview)[39m
+2026-07-24 09:35:54 [32MINFO[39M [32m✅ Gemini TTS สำเร็จ: X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\data\output\job_68\job_68_tts_continuous_raw.mp3 (210.0 KB)[39m
+2026-07-24 09:35:55 [32MINFO[39M [32m✅ เสียงพากย์จัดตามคลิป 2×8s (พูด 10.7s, ตัดที่ 5.4)[39m
+2026-07-24 09:35:55 [32MINFO[39M [32m[service | tts.generate | job=68] สร้างเสียงพากย์ — สำเร็จ[39m {"durationMs":10162}
+2026-07-24 09:35:55 [32MINFO[39M [32m📝 SRT สร้างเสร็จ: X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\data\output\job_68\job_68_sub.srt (2 segments)[39m
+2026-07-24 09:35:55 [32MINFO[39M [32m[ffmpeg | video.assemble | job=68] รวมคลิป เสียง และซับไตเติล — เริ่ม[39m {}
+2026-07-24 09:35:55 [32MINFO[39M [W9001] [32m🔧 Normalize และเรียง 2 คลิปแบบ 1→2→3 → 720x1280 @ 24fps...[39m
+2026-07-24 09:36:00 [32MINFO[39M [W9001] [32m🔗 ต่อคลิป...[39m
+2026-07-24 09:36:00 [33MWARN[39M [33m⚠️ ไม่มีเพลงใน BGM folder — ใส่ไฟล์ .mp3/.wav ลง ./data/bgm[39m
+2026-07-24 09:36:01 [32MINFO[39M [W9001] [32m⏱️ คลิป 1→2→3 16.0s | เสียงพากย์ 16.0s → ไฟล์สุดท้าย 16.0s[39m
+2026-07-24 09:36:01 [32MINFO[39M [W9001] [32m🎬 รวม: วิดีโอ + เสียงพากย์ + ซับ + เพลง...[39m
+2026-07-24 09:36:01 [32MINFO[39M [W9001] [32m🔊 ผสม: พากย์ + บรรยากาศ Veo (0.18) → -14 LUFS (ไม่มีเพลง BGM)[39m
+2026-07-24 09:36:01 [32MINFO[39M [W9001] [32m🔇 ไม่เบิร์นซับ — ใช้เสียงพากย์อย่างเดียว (ตั้ง SUBTITLE_BURN_IN=true ถ้าอยากได้ซับ)[39m
+2026-07-24 09:36:04 [32MINFO[39M [W9001] [32m✅ วิดีโอพร้อมลง: X:\ทีมมีเดีย\เฟรนด์\app\clipbot\new\data\output\job_68\job_68_final.mp4 (2.5 MB)[39m
+2026-07-24 09:36:04 [32MINFO[39M [32m[ffmpeg | video.assemble | job=68] รวมคลิป เสียง และซับไตเติล — สำเร็จ[39m {"durationMs":9168}
+2026-07-24 09:36:04 [32MINFO[39M [32m[service | job.finalize | trace=mrybvh98-ueyupz | job=68] พากย์เสียงและประกอบวิดีโอสุดท้าย — สำเร็จ[39m {"durationMs":37219}
+2026-07-24 09:36:04 [32MINFO[39M [32m[extension | bot.status | trace=mrybw9zi-4xbe2a] งาน #68 เสร็จแล้ว — พักสุ่ม 3 นาที ก่อนงานถัดไป[39m {"running":true,"creditLocked":false}
+2026-07-24 09:36:29 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: stop[39m
+2026-07-24 09:36:44 [32MINFO[39M [32m[extension | bot.status | trace=mrybx4eb-s9njy2] รีโมตสั่งหยุดบอท[39m {"running":false,"creditLocked":false}
+2026-07-24 09:36:59 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: lock[39m
+2026-07-24 09:37:14 [32MINFO[39M [32m[extension | bot.status | trace=mrybxrjj-kfnhe6] รีโมตล็อกเครดิตแล้ว[39m {"running":false,"creditLocked":true}

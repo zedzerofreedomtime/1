@@ -1,0 +1,61 @@
+{
+  "capturedAt": "2026-07-27T15:58:00+07:00",
+  "capturedBy": "Claude ผ่าน Chrome ของเจ้าของ (อ่านอย่างเดียว ไม่กด Generate ไม่เสียเครดิต)",
+  "note": "DOM จริงของโหมด 'ส่วนผสม' (Ingredients-to-Video) — ใช้เขียน selector แทนการเดา",
+  "modeTabs": {
+    "selector": "[role=\"tab\"]",
+    "totalTabs": 14,
+    "items": [
+      { "text": "imageรูปภาพ", "ariaSelected": "false" },
+      { "text": "play_circleวิดีโอ", "ariaSelected": "true" },
+      { "text": "crop_freeเฟรม", "ariaSelected": "true" },
+      { "text": "chrome_extensionส่วนผสม", "ariaSelected": "false" },
+      { "text": "crop_9_169:16", "ariaSelected": "true" },
+      { "text": "crop_16_916:9", "ariaSelected": "false" },
+      { "text": "1x", "ariaSelected": "true" },
+      { "text": "x2", "ariaSelected": "false" },
+      { "text": "x3", "ariaSelected": "false" },
+      { "text": "x4", "ariaSelected": "false" },
+      { "text": "4s", "ariaSelected": "false" },
+      { "text": "6s", "ariaSelected": "false" },
+      { "text": "8s", "ariaSelected": "true" },
+      { "text": "10s", "ariaSelected": "false" }
+    ]
+  },
+  "keyFindings": [
+    "ส่วนผสม เป็น [role=\"tab\"] ตัวหนึ่งในกลุ่มเดียวกับ เฟรม → selectRequiredTab เดิมใช้ได้เลย",
+    "ligature ของไอคอนคือ chrome_extension (เฟรม ใช้ crop_free) → จับด้วย /chrome_extension|ส่วนผสม/i",
+    "โหมดนี้มี 9:16, 1x, Omni Flash, 8s ครบเหมือนโหมดเฟรมทุกอย่าง",
+    "ค่าเครดิตที่แสดง 'การสร้างจะใช้ 12 เครดิต' เท่ากับโหมดเฟรม — ไม่แพงกว่า"
+  ],
+  "composerInIngredientsMode": {
+    "startEndFrameSlots": "หายไป (โหมดเฟรมมี เริ่ม/⇄/สิ้นสุด แต่โหมดส่วนผสมไม่มี)",
+    "addButton": {
+      "text": "add_2สร้าง",
+      "ariaHaspopup": "dialog",
+      "note": "ปุ่ม + เปิดคลังสื่อ — ตัวเดียวกับที่บอทรู้จักอยู่แล้ว"
+    },
+    "submitButton": {
+      "text": "arrow_forwardสร้าง",
+      "ariaHaspopup": null,
+      "note": "ปุ่มส่งตัวจริง ห้ามจับด้วยคำว่า 'สร้าง' เฉยๆ เพราะชนกับปุ่ม +"
+    },
+    "promptInput": "div[role=\"textbox\"] (เหมือนเดิม)",
+    "fileInput": {
+      "selector": "input[type=file]",
+      "accept": "image/*",
+      "multiple": true,
+      "note": "รับหลายรูปพร้อมกันได้ → แนบส่วนผสม 4 รูปในครั้งเดียวได้"
+    },
+    "settingsButton": {
+      "text": "วิดีโอ · 8scrop_9_16",
+      "ariaHaspopup": "menu"
+    }
+  },
+  "implicationsForBot": [
+    "configureVideo() ต้องรับพารามิเตอร์โหมด แทนการล็อก 'เฟรม' ตายตัว",
+    "โหมดส่วนผสมไม่ต้องเรียก uploadStartFrame/uploadEndFrame เลย — ใช้ปุ่ม + แนบรูปหลายรูปแทน",
+    "คลิป 2 ยังต้องใช้โหมดเฟรม เพราะต้องวางเฟรมสุดท้ายของคลิป 1 เป็น Start frame",
+    "แปลว่าต้องสลับโหมดระหว่างคลิป 1 (ส่วนผสม) กับคลิป 2 (เฟรม) ในงานเดียวกัน"
+  ]
+}

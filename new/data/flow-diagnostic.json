@@ -1,0 +1,199 @@
+{
+  "at": "2026-08-03T08:03:25.378Z",
+  "message": "รอหน้าจอ Flow นานเกินกำหนด: Flow ล้างช่องพรอมต์หลังกด Generate ครั้งที่ 2",
+  "url": "https://labs.google/fx/th/tools/flow/project/98a70d6c-4f06-4f89-aef9-aa53dd499acb",
+  "ui": [
+    {
+      "tag": "button",
+      "text": "arrow_backย้อนกลับ",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "aria": "ข้อความที่แก้ไขได้",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "more_vertตัวเลือกเพิ่มเติม",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "searchค้นหา",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "filter_listจัดเรียงและกรอง",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "addเพิ่มสื่อ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "helpความช่วยเหลือเกี่ยวกับผลิตภัณฑ์",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "settings_2ดูการตั้งค่า",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "more_vertเพิ่มเติม",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "ULTRA",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "dashboardสื่อทั้งหมด",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "imageดูรูปภาพ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "accessibility_newตัวละคร",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "movieดูฉาก",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "drive_folder_uploadดูสื่อที่อัปโหลด",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "apps_spark_2เครื่องมือ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "deleteดูถังขยะ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "left_panel_closeยุบ",
+      "shown": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "warningล้มเหลวundoใช้พรอมต์ซ้ำdelete_foreverล",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "undoใช้พรอมต์ซ้ำ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "delete_foreverลบ",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "redoใช้พรอมต์ซ้ำ",
+      "shown": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "imageclipbot_job_170_product_reference.jpg",
+      "shown": true
+    },
+    {
+      "tag": "img",
+      "alt": "รูปภาพที่สร้างขึ้น",
+      "src": "https://labs.google/fx/api/trpc/media.getMediaUrlRedirect?name=f520a83",
+      "shown": true
+    },
+    {
+      "tag": "div",
+      "role": "textbox",
+      "text": "คุณต้องการสร้างอะไร",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "dialog",
+      "expanded": "false",
+      "text": "add_2สร้าง",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "text": "Agent",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "pop": "menu",
+      "expanded": "false",
+      "text": "🍌 Nano Banana Procrop_9_16x1",
+      "shown": true
+    },
+    {
+      "tag": "button",
+      "text": "arrow_forwardสร้าง",
+      "shown": true
+    },
+    {
+      "tag": "input",
+      "type": "file",
+      "shown": false
+    },
+    {
+      "tag": "textarea",
+      "shown": false
+    },
+    {
+      "tag": "p",
+      "role": "alert",
+      "text": "Google Flow - สตูดิโอสร้างสรรค์ด้วย AI สำหรับ",
+      "shown": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Clip Bot — Shopee Auto Harvester",
+  "version": "0.2.7",
+  "description": "เก็บรีวิว Shopee อัตโนมัติแบบ queue-driven ส่งเข้า Clip Bot backend ของคุณเอง — ไม่ต้องใส่ token ใส่แค่ backend URL แล้วกดเริ่ม",
+  "permissions": ["storage", "tabs", "scripting", "alarms"],
+  "host_permissions": [
+    "*://*.shopee.co.th/*",
+    "*://*.shopee.com/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://*/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.shopee.co.th/*", "*://*.shopee.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://*.shopee.co.th/*", "*://*.shopee.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Clip Bot Harvester" }
+}

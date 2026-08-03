@@ -1,0 +1,28 @@
+{
+  "motionPrompts": [
+    "Continuity lock: use the exact same front-facing product. Do not redraw, change its label/logo/colors, rotate, open, duplicate, or add objects. Keep the product still; move only the hand or camera. Handheld close-up. Product stays front-facing while the thumb lightly taps the lower label; rack focus slowly from the fingers to the logo.",
+    "Continuity lock: use the exact same front-facing product. Do not redraw, change its label/logo/colors, rotate, open, duplicate, or add objects. Keep the product still; move only the hand or camera. Continue the exact frame. The same hand traces only the visible cap seam once; shift macro focus from label to cap and back.",
+    "Continuity lock: use the exact same front-facing product. Do not redraw, change its label/logo/colors, rotate, open, duplicate, or add objects. Keep the product still; move only the hand or camera. Continue the exact frame. The same hand steadies the product while the camera gently pulls back, reveals the natural setting, then holds a clean hero frame."
+  ],
+  "narrationScript": "ได้ยินชื่อเสียงตัวนี้มานานเลยต้องลองสั่งมาให้สามีทานดูค่ะ ตัวขวดดีไซน์สวยดูดีแถมยังมีข้อมูลส่วนประกอบบอกไว้ชัดเจนมาก หลังจากให้สามีลองทานแล้วรู้สึกเลยว่าเขานอนหลับได้ดีขึ้นเยอะเลยค่ะ",
+  "subtitleSegments": [
+    {
+      "text": "ได้ยินชื่อเสียงตัวนี้มานานเลยต้องลองสั่งมาให้สามีทานดูค่ะ",
+      "endSec": 8,
+      "startSec": 0
+    },
+    {
+      "text": "ตัวขวดดีไซน์สวยดูดีแถมยังมีข้อมูลส่วนประกอบบอกไว้ชัดเจนมาก",
+      "endSec": 16,
+      "startSec": 8
+    },
+    {
+      "text": "หลังจากให้สามีลองทานแล้วรู้สึกเลยว่าเขานอนหลับได้ดีขึ้นเยอะเลยค่ะ",
+      "endSec": 24,
+      "startSec": 16
+    }
+  ],
+  "selectedImageIndices": [
+    4
+  ]
+}

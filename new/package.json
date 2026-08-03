@@ -1,0 +1,35 @@
+{
+  "name": "clipbot-flow",
+  "version": "1.0.0",
+  "description": "ClipBot Flow — บอทกดเว็บ Google Flow อัตโนมัติ",
+  "type": "module",
+  "scripts": {
+    "control": "node --use-system-ca --import tsx backend/src/server/index.ts",
+    "control:dev": "tsx watch backend/src/server/index.ts",
+    "chrome": "tsx backend/scripts/launch-chrome.ts",
+    "status": "tsx backend/scripts/status.ts",
+    "logs": "tsx backend/scripts/recent-logs.ts",
+    "test-regression": "tsx backend/scripts/regression-check.ts",
+    "retry-failed": "tsx backend/scripts/retry-failed.ts",
+    "requeue-job": "tsx backend/scripts/requeue-job.ts",
+    "web:build": "tsx backend/scripts/build-web.ts",
+    "control:auto": "tsx backend/scripts/serve-auto.ts",
+    "brief": "tsx backend/scripts/agent-brief.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.4.0",
+    "pg": "^8.13.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

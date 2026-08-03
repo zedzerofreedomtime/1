@@ -1,0 +1,321 @@
+<style>
+  :root {
+    --ground: #f4f5f7;
+    --surface: #ffffff;
+    --surface-2: #eef0f3;
+    --ink: #191c23;
+    --ink-soft: #4a515e;
+    --ink-faint: #838b99;
+    --line: #dce0e7;
+    --accent: #b81d24;
+    --accent-ink: #b81d24;
+    --accent-soft: #f6dcdd;
+    --easy: #1f8a5b;   --easy-bg: #e3f2ea;
+    --mod: #a56a15;    --mod-bg: #f5ead4;
+    --hard: #c23a1f;   --hard-bg: #f7e0d7;
+    --shadow: 0 1px 2px rgba(20,24,33,.05), 0 8px 24px rgba(20,24,33,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0f1115;
+      --surface: #171a20;
+      --surface-2: #1e222b;
+      --ink: #e9ebf0;
+      --ink-soft: #a3aab7;
+      --ink-faint: #6c7481;
+      --line: #262b35;
+      --accent: #e84b50;
+      --accent-ink: #f07176;
+      --accent-soft: #35171a;
+      --easy: #4ac78d;  --easy-bg: #15271e;
+      --mod: #daa54c;   --mod-bg: #2a2113;
+      --hard: #ec6b4d;  --hard-bg: #2c1712;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #f4f5f7; --surface: #ffffff; --surface-2: #eef0f3;
+    --ink: #191c23; --ink-soft: #4a515e; --ink-faint: #838b99; --line: #dce0e7;
+    --accent: #b81d24; --accent-ink: #b81d24; --accent-soft: #f6dcdd;
+    --easy: #1f8a5b; --easy-bg: #e3f2ea; --mod: #a56a15; --mod-bg: #f5ead4;
+    --hard: #c23a1f; --hard-bg: #f7e0d7;
+    --shadow: 0 1px 2px rgba(20,24,33,.05), 0 8px 24px rgba(20,24,33,.06);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0f1115; --surface: #171a20; --surface-2: #1e222b;
+    --ink: #e9ebf0; --ink-soft: #a3aab7; --ink-faint: #6c7481; --line: #262b35;
+    --accent: #e84b50; --accent-ink: #f07176; --accent-soft: #35171a;
+    --easy: #4ac78d; --easy-bg: #15271e; --mod: #daa54c; --mod-bg: #2a2113;
+    --hard: #ec6b4d; --hard-bg: #2c1712;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  .wrap {
+    --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: clamp(20px, 5vw, 64px) 20px 96px;
+    display: flex;
+    justify-content: center;
+  }
+  .col { width: 100%; max-width: 940px; display: flex; flex-direction: column; gap: 40px; }
+
+  .eyebrow {
+    font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent-ink); display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--accent); display: inline-block; }
+
+  h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.08; margin: 14px 0 0; font-weight: 800; letter-spacing: -.02em; text-wrap: balance; }
+  .lede { color: var(--ink-soft); font-size: 1.08rem; max-width: 62ch; margin: 16px 0 0; }
+
+  h2 { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; margin: 0 0 4px; }
+  h2 .num { color: var(--accent-ink); font-variant-numeric: tabular-nums; margin-right: 10px; }
+  .sec-sub { color: var(--ink-faint); font-size: .95rem; margin: 0 0 20px; }
+
+  /* verdict band */
+  .verdict {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--shadow); padding: 26px 28px; display: flex; gap: 24px; align-items: flex-start;
+    border-left: 4px solid var(--accent);
+  }
+  .verdict .big { font-size: 2.4rem; font-weight: 800; color: var(--accent-ink); line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
+  .verdict p { margin: 0; color: var(--ink-soft); }
+  .verdict strong { color: var(--ink); }
+
+  /* system parts */
+  .parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .part {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+    display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow);
+  }
+  .part .tag { font-family: var(--mono); font-size: .7rem; letter-spacing: .04em; color: var(--accent-ink); font-weight: 600; }
+  .part h3 { margin: 0; font-size: 1.05rem; font-weight: 700; }
+  .part p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
+
+  /* tables */
+  .tblwrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  caption {
+    text-align: left; font-weight: 700; font-size: .95rem; padding: 16px 18px 4px;
+    color: var(--ink); font-family: var(--mono); letter-spacing: .02em;
+  }
+  th, td { text-align: left; padding: 12px 18px; font-size: .9rem; vertical-align: top; border-top: 1px solid var(--line); }
+  thead th {
+    font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-faint);
+    font-weight: 700; border-top: none; background: var(--surface-2);
+  }
+  tbody tr:hover { background: var(--surface-2); }
+  td.comp { font-weight: 600; color: var(--ink); }
+  td .path { font-family: var(--mono); font-size: .82em; color: var(--accent-ink); }
+  td .muted { color: var(--ink-faint); }
+
+  .chip {
+    display: inline-block; font-size: .7rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+    letter-spacing: .02em; white-space: nowrap;
+  }
+  .chip.easy { color: var(--easy); background: var(--easy-bg); }
+  .chip.mod  { color: var(--mod);  background: var(--mod-bg); }
+  .chip.hard { color: var(--hard); background: var(--hard-bg); }
+  .chip.drop { color: var(--ink-faint); background: var(--surface-2); }
+
+  /* callout */
+  .callout {
+    background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    border-radius: 16px; padding: 24px 28px;
+  }
+  .callout h2 { margin-top: 0; }
+  .callout .flag { color: var(--accent-ink); font-weight: 700; }
+  .callout p { margin: 10px 0 0; color: var(--ink-soft); }
+  .callout ul { margin: 12px 0 0; padding-left: 20px; color: var(--ink-soft); }
+  .callout li { margin: 6px 0; }
+
+  /* roadmap */
+  .road { display: flex; flex-direction: column; gap: 0; }
+  .phase { display: grid; grid-template-columns: 52px 1fr; gap: 20px; padding-bottom: 26px; position: relative; }
+  .phase:not(:last-child)::before {
+    content: ""; position: absolute; left: 25px; top: 44px; bottom: -4px; width: 2px; background: var(--line);
+  }
+  .pnum {
+    width: 52px; height: 52px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;
+    color: var(--accent-ink); box-shadow: var(--shadow); z-index: 1; font-variant-numeric: tabular-nums;
+  }
+  .pbody { padding-top: 4px; }
+  .pbody h3 { margin: 0 0 4px; font-size: 1.08rem; font-weight: 700; }
+  .pbody .goal { font-size: .8rem; color: var(--accent-ink); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+  .pbody p { margin: 6px 0 0; color: var(--ink-soft); font-size: .92rem; }
+
+  /* stack */
+  .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; }
+  .scard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; box-shadow: var(--shadow); }
+  .scard .k { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-faint); font-weight: 700; }
+  .scard .v { margin-top: 6px; font-family: var(--mono); font-size: .9rem; color: var(--ink); font-weight: 600; }
+
+  footer { color: var(--ink-faint); font-size: .82rem; border-top: 1px solid var(--line); padding-top: 20px; }
+
+  @media (max-width: 560px) {
+    .verdict { flex-direction: column; gap: 12px; }
+    .verdict .big { font-size: 2rem; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="col">
+
+    <header>
+      <div class="eyebrow">Feasibility &amp; Rebuild Blueprint</div>
+      <h1>สร้างระบบใหม่ให้ทำงานเหมือนต้นฉบับทุกอย่าง</h1>
+      <p class="lede">ถอดโครง SamuraiVdo 1.12 ออกมาทีละชิ้น แล้วแมปว่าเราต้องสร้างอะไรใหม่บ้าง — พร้อมประเมินความยากจริงและลำดับการลงมือ</p>
+    </header>
+
+    <section class="verdict">
+      <div class="big">เป็นไปได้ 100%</div>
+      <p>ไม่มีชิ้นส่วนไหนใช้เทคโนโลยีลับหรือพิเศษ — ทุกอย่างเป็นของมาตรฐานที่สร้างใหม่ได้หมด (accessibility automation, ตัดต่อ Media3, AI แคปชั่น, REST backend, เว็บคุมบอท). <strong>สิ่งที่ต้องยอมรับคือมันเป็นโปรเจกต์จริงจัง 3 ก้อน ไม่ใช่แอปเดียว</strong> และมี “จุดยากที่ต้องดูแลต่อเนื่อง” อยู่หนึ่งจุด ซึ่งอธิบายไว้ด้านล่าง</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">Architecture</div>
+      <h2>ระบบเต็มมี 3 ก้อน</h2>
+      <p class="sec-sub">ต้นฉบับเป็น client–server ถ้าจะ “เหมือนทุกอย่าง” ต้องสร้างครบทั้งสามส่วน</p>
+      <div class="parts">
+        <div class="part">
+          <span class="tag">01 · ANDROID APP</span>
+          <h3>แอปบนมือถือ</h3>
+          <p>มือกดจอ + เครื่องยนต์เจนคลิป: accessibility service, foreground service, ตัดต่อวิดีโอ, AI แคปชั่น, ปุ่มลอย</p>
+        </div>
+        <div class="part">
+          <span class="tag">02 · BACKEND</span>
+          <h3>เซิร์ฟเวอร์ของเรา</h3>
+          <p>REST API เก็บชุดสินค้า (dataset), รับ-ส่งคำสั่ง, สถานะเครื่อง, heartbeat, คีย์ AI — แทนที่เซิร์ฟเวอร์เดิมที่เราไม่มี</p>
+        </div>
+        <div class="part">
+          <span class="tag">03 · WEB DASHBOARD</span>
+          <h3>เว็บคุมบอท</h3>
+          <p>หน้าเว็บสั่ง start/stop/pause, ตั้งค่า, ดูสถานะเครื่องแบบเรียลไทม์ — ตรงกับที่ต้นฉบับเรียก “คำสั่งจากเว็บ”</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Component Map</div>
+      <h2>แมปทีละชิ้น: ต้นฉบับ → ของเรา</h2>
+      <p class="sec-sub">สีบอกความยากในการสร้างใหม่ — <span class="chip easy">ง่าย</span> งานมาตรฐาน · <span class="chip mod">ปานกลาง</span> ต้องออกแบบเอง · <span class="chip hard">ยาก</span> ต้องดูแลต่อเนื่อง</p>
+
+      <div class="tblwrap">
+        <table>
+          <caption># 01 — Android App</caption>
+          <thead><tr><th>ชิ้นส่วน</th><th>ต้นฉบับ</th><th>ของเรา</th><th>ความยาก</th></tr></thead>
+          <tbody>
+            <tr><td class="comp">Accessibility Automation</td><td>กดจอ Shopee ด้วย view-id/text/พิกัด</td><td class="muted">แมป UI ของ Shopee/TikTok เอง แล้วสร้าง selector ของเรา</td><td><span class="chip hard">ยาก</span></td></tr>
+            <tr><td class="comp">Bot Engine</td><td>foreground service วนทำทีละคลิป</td><td class="muted">state machine เดิม: pick → compose → caption → post</td><td><span class="chip mod">ปานกลาง</span></td></tr>
+            <tr><td class="comp">Video Composer</td><td>Media3 Transformer + intro/outro/ลายน้ำ</td><td class="muted">ใช้ Media3 เหมือนกัน สร้าง pipeline ของเรา</td><td><span class="chip mod">ปานกลาง</span></td></tr>
+            <tr><td class="comp">AI Captioner</td><td>OpenAI / Gemini / OpenRouter</td><td class="muted">เรียก API ตรง ใส่คีย์ของเราเอง</td><td><span class="chip easy">ง่าย</span></td></tr>
+            <tr><td class="comp">Floating button + overlay</td><td>ปุ่มลอย + banner “อย่ากดจอ”</td><td class="muted">WindowManager overlay มาตรฐาน</td><td><span class="chip easy">ง่าย</span></td></tr>
+            <tr><td class="comp">LoginActivity + token</td><td>ยืนยันตัวกับเซิร์ฟเวอร์</td><td class="muted">ตัดทิ้ง — ผูก device-id อัตโนมัติแทน</td><td><span class="chip drop">ตัดออก</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tblwrap" style="margin-top:16px">
+        <table>
+          <caption># 02 — Backend</caption>
+          <thead><tr><th>ชิ้นส่วน</th><th>ต้นฉบับ</th><th>ของเรา</th><th>ความยาก</th></tr></thead>
+          <tbody>
+            <tr><td class="comp">Command queue</td><td><span class="path">/api/app/commands</span> + ack</td><td class="muted">คิวคำสั่ง start/stop/pause/set_config</td><td><span class="chip mod">ปานกลาง</span></td></tr>
+            <tr><td class="comp">Status &amp; heartbeat</td><td><span class="path">/api/app/status</span> · <span class="path">/heartbeat</span></td><td class="muted">รับสถานะเครื่องทุก 4 วิ + online ทุก 30 วิ</td><td><span class="chip easy">ง่าย</span></td></tr>
+            <tr><td class="comp">Dataset store</td><td><span class="path">/api/app/datasets</span></td><td class="muted">เก็บสินค้า/สื่อที่จะเอาไปทำคลิป + ระบบล็อกกันซ้ำ</td><td><span class="chip mod">ปานกลาง</span></td></tr>
+            <tr><td class="comp">AI config</td><td><span class="path">/api/app/ai-config</span></td><td class="muted">แจกคีย์/พรอมป์ให้เครื่องจากส่วนกลาง</td><td><span class="chip easy">ง่าย</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tblwrap" style="margin-top:16px">
+        <table>
+          <caption># 03 — Web Dashboard</caption>
+          <thead><tr><th>ชิ้นส่วน</th><th>ต้นฉบับ</th><th>ของเรา</th><th>ความยาก</th></tr></thead>
+          <tbody>
+            <tr><td class="comp">Control panel</td><td>สั่ง start/stop/pause จากเว็บ</td><td class="muted">ส่งคำสั่งเข้าคิว backend</td><td><span class="chip easy">ง่าย</span></td></tr>
+            <tr><td class="comp">Device monitor</td><td>ดูสถานะเครื่องเรียลไทม์</td><td class="muted">poll หรือ WebSocket แสดง produced/target/stage</td><td><span class="chip mod">ปานกลาง</span></td></tr>
+            <tr><td class="comp">Settings sync</td><td><span class="path">/api/app/settings</span></td><td class="muted">แก้ค่าบนเว็บ → ดันลงเครื่อง</td><td><span class="chip easy">ง่าย</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div class="eyebrow">The one hard part</div>
+      <h2>จุดที่ยากจริง — และยากตลอดไป</h2>
+      <p><span class="flag">Accessibility automation ของ Shopee/TikTok คือหัวใจ และเป็นจุดเปราะที่สุด</span> เพราะมันพึ่งพา “หน้าตา UI” ของแอปปลายทางที่เราไม่ได้เป็นเจ้าของ ต้นฉบับ hardcode ตำแหน่งปุ่ม/ไอดีของ Shopee ไว้</p>
+      <ul>
+        <li>ต้องไล่ส่อง UI ของ Shopee เอง (view-id, ข้อความปุ่ม, ลำดับหน้าจอ) เพื่อสร้าง selector ของเรา — ทำได้ แต่กินเวลา</li>
+        <li>เมื่อ Shopee/TikTok อัปเดตแอป ปุ่มขยับ → บอทพัง ต้องตามแก้ selector เรื่อยๆ นี่คือ “ค่าบำรุงรักษา” ที่ต้องมีคนดูแล</li>
+        <li>ส่วนอื่น (ตัดต่อ, AI, backend, เว็บ) สร้างเสร็จแล้วนิ่ง แต่ส่วนนี้ต้องดูแลต่อเนื่อง</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="eyebrow">Roadmap</div>
+      <h2>ลำดับการสร้าง (แนะนำ)</h2>
+      <p class="sec-sub">สร้างให้เห็นผลเร็วก่อน แล้วค่อยต่อระบบรีโมท — แต่ละเฟสได้ของที่ใช้งานได้จริง</p>
+      <div class="road">
+        <div class="phase">
+          <div class="pnum">1</div>
+          <div class="pbody">
+            <span class="goal">Standalone core</span>
+            <h3>แอปเดี่ยว: เลือกสินค้า → ตัดต่อ → AI แคปชั่น</h3>
+            <p>ไม่มี server ไม่มี login คุมบนมือถือ ได้ไฟล์คลิปพร้อมแคปชั่นออกมา พิสูจน์ว่าเครื่องยนต์ทำงาน</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="pnum">2</div>
+          <div class="pbody">
+            <span class="goal">Auto-post</span>
+            <h3>ต่อ Accessibility automation โพสต์เข้า Shopee</h3>
+            <p>จุดยากที่สุด ทำทีละแพลตฟอร์ม เริ่มจาก Shopee ก่อน + ปุ่มลอย + ระบบดึงแอปกลับ</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="pnum">3</div>
+          <div class="pbody">
+            <span class="goal">Backend + remote</span>
+            <h3>เซิร์ฟเวอร์ + คิวคำสั่ง + สถานะ</h3>
+            <p>ให้คุมหลายเครื่องจากส่วนกลาง: dataset store, command queue, heartbeat, device-id auto-register (แทน login)</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="pnum">4</div>
+          <div class="pbody">
+            <span class="goal">Web dashboard</span>
+            <h3>หน้าเว็บคุมบอท + มอนิเตอร์</h3>
+            <p>สั่งงาน ตั้งค่า และดูสถานะทุกเครื่องแบบเรียลไทม์ — ครบเหมือนต้นฉบับ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Recommended stack</div>
+      <h2>เทคโนโลยีที่แนะนำ</h2>
+      <p class="sec-sub">เลือกให้ตรงของเดิมมากที่สุดเพื่อลดความเสี่ยง</p>
+      <div class="stack">
+        <div class="scard"><div class="k">App</div><div class="v">Kotlin · Android</div></div>
+        <div class="scard"><div class="k">Video</div><div class="v">Media3 Transformer</div></div>
+        <div class="scard"><div class="k">AI</div><div class="v">OpenAI · Gemini</div></div>
+        <div class="scard"><div class="k">Backend</div><div class="v">Node/FastAPI + DB</div></div>
+        <div class="scard"><div class="k">Web</div><div class="v">React / Next.js</div></div>
+        <div class="scard"><div class="k">minSdk</div><div class="v">26 (เท่าเดิม)</div></div>
+      </div>
+    </section>
+
+    <footer>
+      หมายเหตุตามจริง: การใช้ accessibility service กดโพสต์อัตโนมัติผิด ToS ของ Shopee/TikTok — เสี่ยงบัญชีถูกแบน และ Google Play มักไม่อนุมัติ (ต้องแจก APK เอง). ส่วนตัดต่อ + AI แคปชั่นไม่มีปัญหา · อ้างอิงโครงจาก SamuraiVdo 1.12 (decompiled) เพื่อใช้เป็นพิมพ์เขียวเท่านั้น
+    </footer>
+
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path name="clips" path="clips/" />
+    <files-path name="internal_clips" path="clips/" />
+    <cache-path name="cache" path="." />
+</paths>

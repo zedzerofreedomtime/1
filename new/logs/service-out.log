@@ -1,0 +1,45 @@
+
+> clipbot-flow@1.0.0 control
+> tsx src/server.ts
+
+2026-07-22 17:23:58 [32MINFO[39M [32m✅ เชื่อมต่อ PostgreSQL สำเร็จ[39m
+2026-07-22 17:23:59 [33MWARN[39M [33m⚠️ พบตาราง Python เก่า scrapejob — เก็บไว้แบบ read-only; Node ใช้ scrape_job เท่านั้น[39m
+2026-07-22 17:23:59 [32MINFO[39M [32m✅ ClipForge schema v2 พร้อมใช้งาน (dataset, item, flow_job, scrape_job, scrape_ingest_batch)[39m
+2026-07-22 17:23:59 [32MINFO[39M [32m[service | startup] ClipBot Flow พร้อมที่ http://127.0.0.1:8110[39m {"version":"1.0.0"}
+2026-07-22 17:26:25 [32MINFO[39M [32m[extension | bot.status | trace=mrvxtg4j-gh51mz] หยุดเพื่อความปลอดภัย: รอหน้าจอ Flow นานเกินกำหนด: ปุ่มเพิ่มไปยังพรอมต์หลังประมวลผลเฟรม 180s[39m {"running":false,"creditLocked":true}
+2026-07-22 17:26:55 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: unlock[39m
+2026-07-22 17:27:10 [32MINFO[39M [32m[extension | bot.status | trace=mrvxueu7-5hlrui] รีโมตปลดล็อกเครดิตแล้ว — พร้อมเริ่ม[39m {"running":false,"creditLocked":false}
+2026-07-22 17:27:25 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: start[39m
+2026-07-22 17:27:25 [32MINFO[39M [32m[service | job.auto | trace=mrvxuqfq-h83194] สุ่มสินค้าเข้าคิวอัตโนมัติ — เริ่ม[39m {}
+2026-07-22 17:27:25 [32MINFO[39M [32m[service | job.auto | trace=mrvxuqfq-h83194] สุ่มสินค้าเข้าคิวอัตโนมัติ — สำเร็จ[39m {"durationMs":15}
+2026-07-22 17:27:25 [32MINFO[39M [32m[extension | bot.status | trace=mrvxuqgk-ep0l7u] Gemini กำลังเลือกภาพและวางแผน 2 คลิป[39m {"running":true,"creditLocked":false}
+2026-07-22 17:27:25 [32MINFO[39M [32m[service | job.prepare | trace=mrvxuqhp-labh4m] จองงานและให้ Gemini เตรียมรูป/พรอมต์ — เริ่ม[39m {}
+2026-07-22 17:27:26 [32MINFO[39M [32m[service | job.prepare | trace=mrvxuqhp-labh4m] จองงานและให้ Gemini เตรียมรูป/พรอมต์ — สำเร็จ[39m {"durationMs":31}
+2026-07-22 17:27:26 [32MINFO[39M [32m[extension | bot.status | trace=mrvxuqix-jg9jsw | job=49 | clip=1] กำลังเปิด Flow สำหรับงาน #49[39m {"running":true,"creditLocked":false}
+2026-07-22 17:27:31 [32MINFO[39M [32m[extension | bot.status | trace=mrvxuujr-g2z08s | job=49 | clip=1] งาน #49: เตรียมคลิป 1 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-22 17:27:31 [32MINFO[39M [32m[extension | bot.status | trace=mrvxuukq-ae87ya | job=49 | clip=1] กำลังเปิดโปรเจกต์ใหม่ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-22 17:27:31 [32MINFO[39M [32m[extension | bot.status | trace=mrvxuum4-jj4sj0 | job=49 | clip=1] กดสร้างโปรเจกต์ใหม่แล้ว — รอหน้า editor[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:01 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvhuj-9lb7cb | job=49 | clip=1] กำลังตั้งค่าวิดีโอ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:03 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvja7-1qzm0q | job=49 | clip=1] ตั้งค่าวิดีโอสำเร็จ: เฟรม · Omni Flash · 9:16 · 1x · 8s[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:03 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvjb9-m1qf4r | job=49 | clip=1] เปิดคลังสื่อเพื่ออัปโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:03 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvjnk-wpibko | job=49 | clip=1] กำลังโหลดรูปที่ Gemini เลือก[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:03 [32MINFO[39M [32m[extension | media.fetch | trace=mrvxvjpe-hqp1nw | job=49 | clip=1] โหลดรูปผ่าน Extension background สำเร็จ[39m {"bytes":105392}
+2026-07-22 17:28:03 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvjpz-olezb8 | job=49 | clip=1] อัปโหลด clipbot_job_49_frame_1.jpg แล้ว — รอขึ้นคลัง[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:04 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvkdu-pjc3jq | job=49 | clip=1] Flow กำลังประมวลผลเฟรมต้น (0s) — รอปุ่มเพิ่มไปยังพรอมต์[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:20 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvwux-m1zzp8 | job=49 | clip=1] เลือกรูปเป็น Start frame แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:20 [32MINFO[39M [32m[extension | bot.status | trace=mrvxvwvq-i2lory | job=49 | clip=1] กำลังใส่ Motion Prompt ใน Flow[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:29 [32MINFO[39M [32m[extension | bot.status | trace=mrvxw3vi-ta7zb7 | job=49 | clip=1] Motion Prompt typed character-by-character; Generate is enabled[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:30 [32MINFO[39M [32m[extension | bot.status | trace=mrvxw3wm-gxntrx | job=49 | clip=1] งาน #49: พร้อมกดสร้างคลิป 1[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:30 [32MINFO[39M [32m[extension | bot.status | trace=mrvxw3xr-uqg7xs | job=49 | clip=1] งาน #49: เปิดตัวเฝ้าผลคลิป 1 แล้ว[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:30 [32MINFO[39M [32m[extension | bot.status | trace=mrvxw42o-2wm4e2 | job=49 | clip=1] งาน #49: ส่งสร้างคลิป 1 แล้ว — จะไม่กดซ้ำ[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:34 [32MINFO[39M [32m[extension | bot.status | trace=mrvxw72e-sygnp9 | job=49 | clip=1] งาน #49: Flow แสดงสถานะล้มเหลวชั่วคราว — รอคลิปใหม่อีกไม่เกิน 2 นาที[39m {"running":true,"creditLocked":false}
+2026-07-22 17:28:34 [33MWARN[39M [33m[extension | flow.image-failure-grace | trace=mrvxw73j-fzm3or | job=49 | clip=1] พบการ์ดล้มเหลวระหว่างที่ภาพใหม่อาจยังประมวลผลอยู่[39m {"graceUntil":1784716230061}
+2026-07-22 17:29:22 [32MINFO[39M [32m[extension | bot.status | trace=mrvxx88z-qp9hce | job=49 | clip=1] เจอวิดีโอใหม่ใน 52s — กำลังบันทึก[39m {"running":true,"creditLocked":false}
+2026-07-22 17:29:22 [32MINFO[39M [32m[extension | bot.status | trace=mrvxx89u-mmo5ol | job=49 | clip=1] กำลังบันทึกคลิป 1 จาก 2[39m {"running":true,"creditLocked":false}
+2026-07-22 17:29:22 [32MINFO[39M [32m[extension | clip.download | trace=mrvxx8ax-ez5ksb | job=49 | clip=1] เริ่มดาวน์โหลดคลิปจาก Flow[39m {}
+2026-07-22 17:29:23 [32MINFO[39M [32m[service | clip.import | trace=mrvxx9f6-53nyns | job=49 | clip=1] นำเข้าไฟล์จาก Chrome Downloads — เริ่ม[39m {}
+2026-07-22 17:29:24 [32MINFO[39M [32m📥 นำคลิปจาก Chrome Downloads เข้า job #49 clip 1 แล้ว (1823 KB)[39m
+2026-07-22 17:29:24 [32MINFO[39M [32m[service | clip.import | trace=mrvxx9f6-53nyns | job=49 | clip=1] นำเข้าไฟล์จาก Chrome Downloads — สำเร็จ[39m {"durationMs":744}
+2026-07-22 17:29:24 [32MINFO[39M [32m[extension | clip.download | trace=mrvxxa07-sbwc3r | job=49 | clip=1] ดาวน์โหลดและนำเข้าคลิปสำเร็จ[39m {"durationMs":2205,"bytes":1866587}
+2026-07-22 17:29:24 [32MINFO[39M [32m[extension | bot.status | trace=mrvxxa0x-kdwvc4 | job=49 | clip=1] บันทึกคลิป 1 แล้ว (1823 KB)[39m {"running":true,"creditLocked":false}
+2026-07-22 17:29:24 [32MINFO[39M [32m[extension | bot.status | trace=mrvxxa1n-70t3yl | job=49 | clip=2] คลิป 1 เสร็จ — พักสุ่ม 8 นาที ก่อนเตรียมคลิป 2 จาก 2[39m {"running":true,"creditLocked":false}

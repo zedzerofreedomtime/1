@@ -1,0 +1,14 @@
+<resources>
+    <color name="crimson">#B81D24</color>
+    <color name="crimson_dark">#8E141A</color>
+    <color name="crimson_light">#E84B50</color>
+    <color name="ink">#191C23</color>
+    <color name="steel">#4A515E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="ic_launcher_background">#12141A</color>
+
+    <color name="ok_green">#1F8A5B</color>
+    <color name="warn_amber">#A56A15</color>
+    <color name="err_red">#C23A1F</color>
+</resources>

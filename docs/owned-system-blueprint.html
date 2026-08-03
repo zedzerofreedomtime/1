@@ -1,0 +1,197 @@
+<style>
+  :root{
+    --ground:#f4f5f7; --surface:#fff; --surface-2:#eef0f3; --ink:#191c23; --ink-soft:#4a515e;
+    --ink-faint:#838b99; --line:#dce0e7; --accent:#b81d24; --accent-ink:#b81d24; --accent-soft:#f6dcdd;
+    --ship:#1f8a5b; --ship-bg:#e3f2ea; --caution:#a56a15; --caution-bg:#f5ead4; --risk:#c23a1f; --risk-bg:#f7e0d7;
+    --shadow:0 1px 2px rgba(20,24,33,.05),0 8px 24px rgba(20,24,33,.06);
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --ground:#0f1115; --surface:#171a20; --surface-2:#1e222b; --ink:#e9ebf0; --ink-soft:#a3aab7;
+    --ink-faint:#6c7481; --line:#262b35; --accent:#e84b50; --accent-ink:#f07176; --accent-soft:#35171a;
+    --ship:#4ac78d; --ship-bg:#15271e; --caution:#daa54c; --caution-bg:#2a2113; --risk:#ec6b4d; --risk-bg:#2c1712;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }}
+  :root[data-theme="light"]{--ground:#f4f5f7;--surface:#fff;--surface-2:#eef0f3;--ink:#191c23;--ink-soft:#4a515e;--ink-faint:#838b99;--line:#dce0e7;--accent:#b81d24;--accent-ink:#b81d24;--accent-soft:#f6dcdd;--ship:#1f8a5b;--ship-bg:#e3f2ea;--caution:#a56a15;--caution-bg:#f5ead4;--risk:#c23a1f;--risk-bg:#f7e0d7;--shadow:0 1px 2px rgba(20,24,33,.05),0 8px 24px rgba(20,24,33,.06);}
+  :root[data-theme="dark"]{--ground:#0f1115;--surface:#171a20;--surface-2:#1e222b;--ink:#e9ebf0;--ink-soft:#a3aab7;--ink-faint:#6c7481;--line:#262b35;--accent:#e84b50;--accent-ink:#f07176;--accent-soft:#35171a;--ship:#4ac78d;--ship-bg:#15271e;--caution:#daa54c;--caution-bg:#2a2113;--risk:#ec6b4d;--risk-bg:#2c1712;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);}
+
+  *{box-sizing:border-box;}
+  .wrap{--sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"Cascadia Code","Consolas",monospace;
+    background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;
+    padding:clamp(20px,5vw,60px) 20px 90px;display:flex;justify-content:center;}
+  .col{width:100%;max-width:980px;display:flex;flex-direction:column;gap:40px;}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);}
+  h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.08;margin:14px 0 0;font-weight:800;letter-spacing:-.02em;text-wrap:balance;}
+  .lede{color:var(--ink-soft);font-size:1.08rem;max-width:64ch;margin:16px 0 0;}
+  h2{font-size:1.4rem;font-weight:800;letter-spacing:-.01em;margin:0 0 4px;}
+  h2 .num{color:var(--accent-ink);font-variant-numeric:tabular-nums;margin-right:10px;}
+  .sub{color:var(--ink-faint);font-size:.95rem;margin:0 0 20px;}
+
+  .band{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:16px;box-shadow:var(--shadow);padding:24px 26px;}
+  .band p{margin:0;color:var(--ink-soft);} .band strong{color:var(--ink);}
+
+  /* architecture diagram */
+  .archwrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow);padding:24px;}
+  .arch{min-width:640px;display:flex;flex-direction:column;gap:14px;}
+  .layer{display:flex;align-items:center;gap:12px;}
+  .ltag{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--ink-faint);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;padding:2px 0;}
+  .boxes{display:flex;gap:12px;flex:1;flex-wrap:wrap;}
+  .box{flex:1;min-width:150px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+  .box.accent{border-color:color-mix(in srgb,var(--accent) 45%,transparent);background:var(--accent-soft);}
+  .box h4{margin:0 0 4px;font-size:.95rem;font-weight:700;}
+  .box p{margin:0;font-size:.8rem;color:var(--ink-soft);}
+  .box .t{font-family:var(--mono);font-size:.68rem;color:var(--accent-ink);margin-top:6px;display:block;}
+  .flow{text-align:center;color:var(--ink-faint);font-size:1.2rem;line-height:1;}
+
+  /* service table */
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);}
+  table{border-collapse:collapse;width:100%;min-width:680px;}
+  th,td{text-align:left;padding:12px 16px;font-size:.88rem;vertical-align:top;border-top:1px solid var(--line);}
+  thead th{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;border-top:none;background:var(--surface-2);}
+  td.svc{font-weight:600;} td .mono{font-family:var(--mono);font-size:.82em;color:var(--accent-ink);}
+  tbody tr:hover{background:var(--surface-2);}
+  .chip{display:inline-block;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .chip.have{color:var(--ship);background:var(--ship-bg);} .chip.build{color:var(--caution);background:var(--caution-bg);}
+
+  /* security callout */
+  .sec{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:16px;padding:24px 26px;}
+  .sec h2{margin-top:0;} .sec .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;margin-top:14px;}
+  .sec .row{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;}
+  .sec .bad{color:var(--risk);font-weight:700;white-space:nowrap;font-family:var(--mono);font-size:.8rem;}
+  .sec .good{color:var(--ink-soft);}
+  @media(max-width:640px){.sec .grid{grid-template-columns:1fr;}}
+
+  /* roadmap */
+  .road{display:flex;flex-direction:column;}
+  .ph{display:grid;grid-template-columns:56px 1fr;gap:18px;padding-bottom:24px;position:relative;}
+  .ph:not(:last-child)::before{content:"";position:absolute;left:27px;top:46px;bottom:-4px;width:2px;background:var(--line);}
+  .pn{width:56px;height:56px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent-ink);box-shadow:var(--shadow);z-index:1;font-variant-numeric:tabular-nums;}
+  .pb h3{margin:2px 0 2px;font-size:1.06rem;font-weight:700;}
+  .pb .goal{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-ink);font-weight:700;}
+  .pb p{margin:6px 0 0;color:var(--ink-soft);font-size:.9rem;}
+  .pb .ship{display:inline-block;margin-top:8px;font-size:.76rem;color:var(--ship);background:var(--ship-bg);padding:3px 10px;border-radius:999px;font-weight:600;}
+
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;}
+  .sc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);}
+  .sc .k{font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;}
+  .sc .v{margin-top:6px;font-family:var(--mono);font-size:.85rem;font-weight:600;}
+
+  footer{color:var(--ink-faint);font-size:.82rem;border-top:1px solid var(--line);padding-top:20px;}
+</style>
+
+<div class="wrap"><div class="col">
+
+  <header>
+    <div class="eyebrow">Owned-System Build Program · 侍</div>
+    <h1>เลิกพึ่งคนขาย — สร้างระบบ Fleet ของเราเอง</h1>
+    <p class="lede">แพลตฟอร์มควบคุมบอทหลายเครื่องแบบครบวงจร สำหรับ Shopee · TikTok · Facebook · Live — ใช้ระบบเดิม (Samurai) เป็นพิมพ์เขียว แต่สร้างใหม่ให้เป็นของเรา 100% และปลอดภัยกว่าเดิม</p>
+  </header>
+
+  <section class="band">
+    <p><strong>กรอบคิด:</strong> งาน reverse-engineering ที่เราทำ = สเปกของสิ่งที่ต้องมี. งาน security ที่เราเจอ = รายการสิ่งที่ <strong>ห้ามลอก</strong> (TLS ปลอม · updater ยัด APK · secret เปลือย). เป้าคือ “ทำงานเหมือนเดิม แต่เราคุมเซิร์ฟเวอร์เอง คีย์อยู่กับเรา และแก้ selector ได้โดยไม่ต้องออกแอปใหม่”. <strong>นี่เป็นงานระดับแพลตฟอร์ม (หลายเดือน หลายบริการ)</strong> — จึงต้องแบ่งเฟสให้เห็นผลเร็วและลดความเสี่ยงทีละชั้น.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Target Architecture</div>
+    <h2>ระบบเต็ม = 5 ส่วน</h2>
+    <p class="sub">แต่ละเครื่องคุยกับ Backend ของเราเท่านั้น — ไม่มี IP คนขายอยู่ในระบบอีก</p>
+    <div class="archwrap"><div class="arch">
+      <div class="layer"><span class="ltag">CONTROL</span><div class="boxes">
+        <div class="box accent"><h4>Web Dashboard</h4><p>คุมทุกเครื่อง · สั่ง start/stop · ตั้ง campaign · ดูสถานะเรียลไทม์</p><span class="t">React / Next.js</span></div>
+      </div></div>
+      <div class="flow">↑↓ REST + WebSocket (TLS + pinning)</div>
+      <div class="layer"><span class="ltag">SERVER</span><div class="boxes">
+        <div class="box accent"><h4>Backend (ของเรา)</h4><p>device auth · discover · dataset/queue · command · status · <strong>AI proxy</strong></p><span class="t">FastAPI + Postgres + Redis</span></div>
+        <div class="box"><h4>Review Ingest</h4><p>รับรีวิว Shopee ที่ scrape มา → สร้าง dataset ให้บอท</p><span class="t">ingest API</span></div>
+      </div></div>
+      <div class="flow">↑ push reviews &nbsp;·&nbsp; ↓ commands / datasets / signed selectors</div>
+      <div class="layer"><span class="ltag">EDGE</span><div class="boxes">
+        <div class="box"><h4>Shopee Scraper</h4><p>Browser extension เก็บรีวิว/สินค้า → ส่งเข้า Backend</p><span class="t">MV3 extension</span></div>
+        <div class="box accent"><h4>Android App (fleet client)</h4><p>เจนคลิป (Media3) + AI caption + auto-post + remote control</p><span class="t">Kotlin · Clip Bot core</span></div>
+        <div class="box"><h4>Live Assist</h4><p>ระบบช่วยไลฟ์ขาย (โมดูลแยก)</p><span class="t">Phase 4</span></div>
+      </div></div>
+      <div class="flow">↓ Accessibility automation</div>
+      <div class="layer"><span class="ltag">TARGETS</span><div class="boxes">
+        <div class="box"><h4>Shopee</h4><p>com.shopee.th</p></div>
+        <div class="box"><h4>TikTok</h4><p>affiliate / video</p></div>
+        <div class="box"><h4>Facebook</h4><p>reels / page</p></div>
+      </div></div>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Service Breakdown</div>
+    <h2>สร้างอะไรบ้าง — และต่างจากของเดิมยังไง</h2>
+    <div class="tblwrap"><table>
+      <thead><tr><th>บริการ</th><th>หน้าที่</th><th>เทคโนโลยี</th><th>ต่างจากของเดิม</th><th>สถานะ</th></tr></thead>
+      <tbody>
+        <tr><td class="svc">Backend</td><td>device auth, discover, dataset+lock, command queue, status, <b>AI proxy</b></td><td class="mono">FastAPI · Postgres · Redis</td><td>คีย์ AI อยู่ที่เซิร์ฟเวอร์ (device ไม่ถือคีย์) · lock มี TTL · idempotency key</td><td><span class="chip build">สร้างใหม่</span></td></tr>
+        <tr><td class="svc">Web Dashboard</td><td>คุม fleet, campaign, มอนิเตอร์</td><td class="mono">Next.js · WebSocket</td><td>เดิมเป็น Flask+JS ล้วน · ของเราเรียลไทม์+role</td><td><span class="chip build">สร้างใหม่</span></td></tr>
+        <tr><td class="svc">Android App</td><td>เจนคลิป + AI + auto-post 3 แพลตฟอร์ม + remote client</td><td class="mono">Kotlin · Media3</td><td>TLS จริง+pinning · secret ใน Keystore · selector อัปเดตจากเซิร์ฟเวอร์</td><td><span class="chip have">มีโครง P1</span></td></tr>
+        <tr><td class="svc">Shopee Scraper</td><td>เก็บรีวิว/สินค้า → ป้อน dataset</td><td class="mono">Chrome MV3 ext</td><td>push เข้า Backend ของเราแทน</td><td><span class="chip build">สร้างใหม่</span></td></tr>
+        <tr><td class="svc">Live Assist</td><td>ช่วยไลฟ์ขาย</td><td class="mono">TBD</td><td>โดเมนแยก — สโคปทีหลัง</td><td><span class="chip build">Phase 4</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec">
+    <div class="eyebrow">Build it right</div>
+    <h2>7 จุดที่เราจะทำต่างจากของเดิม (ห้ามลอกจุดพัง)</h2>
+    <div class="grid">
+      <div class="row"><span class="bad">TLS ปลอม</span><span class="good">→ TLS จริง + certificate pinning ทุก call</span></div>
+      <div class="row"><span class="bad">updater เถื่อน</span><span class="good">→ ไม่มี auto-install; แจกผ่าน MDM/สโตร์ + verify signature</span></div>
+      <div class="row"><span class="bad">คีย์ AI ในเครื่อง</span><span class="good">→ Backend proxy call AI; device ไม่เคยเห็นคีย์</span></div>
+      <div class="row"><span class="bad">secret plaintext</span><span class="good">→ Android Keystore / EncryptedSharedPreferences</span></div>
+      <div class="row"><span class="bad">lock ไม่มี TTL</span><span class="good">→ lock หมดอายุอัตโนมัติ + idempotency key</span></div>
+      <div class="row"><span class="bad">selector hardcode</span><span class="good">→ selector map ดึงจากเซิร์ฟเวอร์ (Shopee เปลี่ยน UI แก้ที่เดียว)</span></div>
+      <div class="row"><span class="bad">cleartext HTTP</span><span class="good">→ HTTPS only, ไม่มี IP ฝัง, device register แบบเพิกถอนได้</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Roadmap</div>
+    <h2>ลำดับการสร้าง — เห็นผลเร็ว ลดเสี่ยงทีละชั้น</h2>
+    <p class="sub">แต่ละเฟสได้ของที่ใช้งานได้จริง ไม่ต้องรอจบทั้งระบบ</p>
+    <div class="road">
+      <div class="ph"><div class="pn">0</div><div class="pb"><span class="goal">Backbone</span>
+        <h3>Backend core + device auth + 1 เครื่อง end-to-end</h3>
+        <p>สร้าง Backend (auth/discover, dataset, command, status) + จับ Android app ที่มี (Clip Bot) มาต่อ พิสูจน์ลูป: สั่งจากเซิร์ฟเวอร์ → เครื่องทำคลิป → รายงานกลับ (ยังไม่ auto-post)</p>
+        <span class="ship">ได้: ลูปควบคุม 1 เครื่องทำงานจริง</span></div></div>
+      <div class="ph"><div class="pn">1</div><div class="pb"><span class="goal">Content + Source</span>
+        <h3>Shopee scraper + เจนคลิปจากรีวิวจริง</h3>
+        <p>Browser extension ดึงรีวิว Shopee → Backend สร้าง dataset → app เจนคลิป + AI caption (ผ่าน AI proxy) ครบ</p>
+        <span class="ship">ได้: คลิปรีวิวออกจริงจากสินค้าจริง</span></div></div>
+      <div class="ph"><div class="pn">2</div><div class="pb"><span class="goal">Fleet</span>
+        <h3>Dashboard + คุมหลายเครื่องพร้อมกัน</h3>
+        <p>เว็บคุม fleet, command queue, มอนิเตอร์เรียลไทม์, item lock กันชนข้ามเครื่อง (มี TTL)</p>
+        <span class="ship">ได้: คุม 5–50 เครื่องจากที่เดียว</span></div></div>
+      <div class="ph"><div class="pn">3</div><div class="pb"><span class="goal">Auto-post</span>
+        <h3>โพสต์อัตโนมัติ Shopee → TikTok → Facebook</h3>
+        <p>Accessibility automation ทีละแพลตฟอร์ม + ระบบ selector อัปเดตจากเซิร์ฟเวอร์ (จุดยาก/เปราะที่สุด ทำหลังฐานมั่นคง)</p>
+        <span class="ship">ได้: ปิดวงจรอัตโนมัติเต็ม</span></div></div>
+      <div class="ph"><div class="pn">4</div><div class="pb"><span class="goal">Expand</span>
+        <h3>Live Assist + ปรับสเกล/ความทน</h3>
+        <p>โมดูลช่วยไลฟ์ขาย + hardening, observability, กระจายโหลด</p>
+        <span class="ship">ได้: ครบเทียบเท่าชุด Samurai ทั้งหมด</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Reality check</div>
+    <h2>ทีม &amp; ความพยายามที่ต้องมี</h2>
+    <p class="sub">พูดตรงๆ เพื่อวางแผนคน/เวลาได้จริง</p>
+    <div class="stack">
+      <div class="sc"><div class="k">Backend</div><div class="v">1 คน · Python</div></div>
+      <div class="sc"><div class="k">Android</div><div class="v">1 คน · Kotlin</div></div>
+      <div class="sc"><div class="k">Frontend</div><div class="v">1 คน · React</div></div>
+      <div class="sc"><div class="k">Phase 0–1</div><div class="v">~4–6 สัปดาห์</div></div>
+      <div class="sc"><div class="k">Phase 2–3</div><div class="v">~2–3 เดือน</div></div>
+      <div class="sc"><div class="k">ภาระต่อเนื่อง</div><div class="v">ตาม selector</div></div>
+    </div>
+  </section>
+
+  <footer>
+    ⚠ ตามจริง: auto-post ผ่าน accessibility ยังผิด ToS ของ Shopee/TikTok/FB (เสี่ยงบัญชีถูกแบน) — เราลดภาระด้วย selector ที่อัปเดตได้ แต่ลบความเสี่ยงแบนไม่ได้. ส่วนเจนคลิป+AI+dashboard ไม่มีปัญหา · อ้างอิงสถาปัตยกรรมจาก RE ของ Samurai VDO 1.12 (เป็นพิมพ์เขียว ไม่ได้ลอกโค้ด)
+  </footer>
+
+</div></div>

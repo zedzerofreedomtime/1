@@ -1,0 +1,8 @@
+
+> clipbot-flow@1.0.0 control
+> tsx src/server.ts
+
+2026-07-21 15:44:22 [32MINFO[39M [32m✅ เชื่อมต่อ PostgreSQL สำเร็จ[39m
+2026-07-21 15:44:22 [32MINFO[39M [32m✅ ตาราง flow_job v2 พร้อมใช้งาน[39m
+2026-07-21 15:44:22 [32MINFO[39M [32m[service | startup] ClipBot Flow พร้อมที่ http://127.0.0.1:8110[39m {"version":"1.0.0"}
+2026-07-21 15:51:23 [32MINFO[39M [32m📡 ส่งคำสั่งรีโมตให้ Extension: reload[39m

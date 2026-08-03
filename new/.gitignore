@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+logs/
+data/output/
+*.log
+data/serve-auto.lock
+
+# ไฟล์สำรองของ .env ก็มีความลับเหมือนกัน — 3 ส.ค. 2026 เคยสร้าง .env.bak แล้วมันโผล่เป็น
+# untracked รอให้ git add -A กวาดเข้าไป
+.env.bak*
+.env.*.bak
